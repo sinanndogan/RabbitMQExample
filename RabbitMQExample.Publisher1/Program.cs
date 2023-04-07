@@ -13,16 +13,27 @@ factory.Uri = new("amqps://vgoeohfm:NmkSmsxycy31BqcSuJ7Me8qFIdR0E6Y_@shrimp.rmq.
 using IConnection connection = factory.CreateConnection();  //bağlantı
 using IModel channel = connection.CreateModel();    //kanal 
 
-
+ 
 //Kuyruk Queue Oluşturma 
 //kuyruk adı example-queue
-channel.QueueDeclare(queue:"example-queue",exclusive:false);
+channel.QueueDeclare(queue:"example-queue",exclusive:false, durable: true);
 
 
 //Queue'ya Mesaj Gönderme
 //RabbitMQ kuyruğa atacağı mesajarı byte türünden kabul etmektedir.Haliyle mesajları bizim byte dönüştürmemiz gerekecektir.
 
-byte [] message = Encoding.UTF8.GetBytes("Merhaba");
-channel.BasicPublish(exchange: "", routingKey: "example-queue", body: message);
+//byte [] message = Encoding.UTF8.GetBytes("Merhaba");
+//channel.BasicPublish(exchange: "", routingKey: "example-queue", body: message);
+
+//kuyruk mesajı kalıcılığı sağladık
+IBasicProperties properties =channel.CreateBasicProperties();
+properties.Persistent = true;
+
+for (int i = 0; i < 100; i++)
+{
+    await Task.Delay(200);
+    byte[] message = Encoding.UTF8.GetBytes("Merhaba");
+    channel.BasicPublish(exchange: "", routingKey: "example-queue", body: message, basicProperties: properties);
+}
 
 Console.Read();
