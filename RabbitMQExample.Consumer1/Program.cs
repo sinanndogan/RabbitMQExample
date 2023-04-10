@@ -7,7 +7,7 @@ using System.Text;
 //Bağlantı Oluşturma
 
 ConnectionFactory factory = new();
-factory.Uri = new("amqps://vgoeohfm:NmkSmsxycy31BqcSuJ7Me8qFIdR0E6Y_@shrimp.rmq.cloudamqp.com/vgoeohfm");
+factory.Uri = new("amqps://localhost");
 
 
 //Bağlantı Aktifleştirme ve Kanal açma 
