@@ -11,11 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQExample.Consumer1",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExchangeTypes", "ExchangeTypes", "{E7DAA861-4EF8-4FF7-9982-51CADF8E9698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Direct.Exchange.Publisher", "RabbitMQ.Direct.Exchange.Publisher\RabbitMQ.Direct.Exchange.Publisher.csproj", "{0213F62B-3004-452C-BBDA-34761D56F5ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Direct.Exchange.Publisher", "RabbitMQ.Direct.Exchange.Publisher\RabbitMQ.Direct.Exchange.Publisher.csproj", "{0213F62B-3004-452C-BBDA-34761D56F5ED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Direct.Exchange", "Direct.Exchange", "{2F94DB81-369F-4E19-BAC1-472FE6D8A23C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DirectExchange", "DirectExchange", "{2F94DB81-369F-4E19-BAC1-472FE6D8A23C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Direct.Exchange.Consumer", "RabbitMQ.Direct.Exchange.Consumer\RabbitMQ.Direct.Exchange.Consumer.csproj", "{E3FCBF8D-FB52-4833-B557-7ADA4FA8706A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Direct.Exchange.Consumer", "RabbitMQ.Direct.Exchange.Consumer\RabbitMQ.Direct.Exchange.Consumer.csproj", "{E3FCBF8D-FB52-4833-B557-7ADA4FA8706A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FanoutExchange", "FanoutExchange", "{5E2F6E62-2CDC-43F4-A34A-FF522206866A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQExample.FanaoutExchange.Publisher", "RabbitMQExample.FanaoutExchange.Publisher\RabbitMQExample.FanaoutExchange.Publisher.csproj", "{A1E4A3D5-49D5-4055-9EAE-1911F093F338}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQExample.FanaoutExchange.Consumer", "RabbitMQExample.FanaoutExchange.Consumer\RabbitMQExample.FanaoutExchange.Consumer.csproj", "{FA641967-0FA9-4B6A-9E1C-02209BE8C8FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,14 @@ Global
 		{E3FCBF8D-FB52-4833-B557-7ADA4FA8706A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3FCBF8D-FB52-4833-B557-7ADA4FA8706A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3FCBF8D-FB52-4833-B557-7ADA4FA8706A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E4A3D5-49D5-4055-9EAE-1911F093F338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E4A3D5-49D5-4055-9EAE-1911F093F338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E4A3D5-49D5-4055-9EAE-1911F093F338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E4A3D5-49D5-4055-9EAE-1911F093F338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA641967-0FA9-4B6A-9E1C-02209BE8C8FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA641967-0FA9-4B6A-9E1C-02209BE8C8FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA641967-0FA9-4B6A-9E1C-02209BE8C8FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA641967-0FA9-4B6A-9E1C-02209BE8C8FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +63,9 @@ Global
 		{0213F62B-3004-452C-BBDA-34761D56F5ED} = {2F94DB81-369F-4E19-BAC1-472FE6D8A23C}
 		{2F94DB81-369F-4E19-BAC1-472FE6D8A23C} = {E7DAA861-4EF8-4FF7-9982-51CADF8E9698}
 		{E3FCBF8D-FB52-4833-B557-7ADA4FA8706A} = {2F94DB81-369F-4E19-BAC1-472FE6D8A23C}
+		{5E2F6E62-2CDC-43F4-A34A-FF522206866A} = {E7DAA861-4EF8-4FF7-9982-51CADF8E9698}
+		{A1E4A3D5-49D5-4055-9EAE-1911F093F338} = {5E2F6E62-2CDC-43F4-A34A-FF522206866A}
+		{FA641967-0FA9-4B6A-9E1C-02209BE8C8FE} = {5E2F6E62-2CDC-43F4-A34A-FF522206866A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03F28367-6DDD-442F-8E3E-65D1534B3DB3}
